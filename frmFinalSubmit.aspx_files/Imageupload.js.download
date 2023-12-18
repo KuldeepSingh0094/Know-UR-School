@@ -1,0 +1,456 @@
+﻿function showimagepreview_Photo(id,n) {
+    var fuData = id.value;
+    var FileUploadPath = fuData;
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (id.files && id.files[0]) {
+            var size = id.files[0].size;
+            if (size > 1024 * 500) {
+//                document.getElementById('ctl00_LoginContent_GVDocslist_ctl02_imgprvw').value = "";
+                alert("File size exceeded maximum size limit");
+                return false;
+            } else {
+                if (id.files && id.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(n).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(id.files[0]);
+                }
+            }
+        }
+    }
+    else {
+       // document.getElementById('ctl00_LoginContent_GVDocslist_ctl02_imgprvw').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewSign(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_SignControl1');
+    var FileUploadPath = fuData.value;
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 30) {
+                document.getElementById('ctl00_LoginContent_SignControl1').value = "";
+                alert("File size exceeded maximum size limit of 30 KB");
+                return false;
+            } else {
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                   
+                    filerdr.readAsDataURL(input.files[0]);
+                }
+            }
+        }
+
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_SignControl1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewThumbImp(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_thumbimpControl1');
+    var FileUploadPath = fuData.value;
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024*30) {
+                document.getElementById('ctl00_LoginContent_thumbimpControl1').value = "";
+                alert("File size exceeded maximum size limit of 30 KB");
+                return false;
+            } else {
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                   
+                    filerdr.readAsDataURL(input.files[0]);
+                }
+            }
+        }
+
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_thumbimpControl1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewOthLanguage(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_othlangSignUpload1');
+    var FileUploadPath = fuData.value;
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024*30) {
+                document.getElementById('ctl00_LoginContent_othlangSignUpload1').value = "";
+                alert("File size exceeded maximum size limit of 30 KB");
+                return false;
+            } else {
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                   
+                    filerdr.readAsDataURL(input.files[0]);
+                }
+            }
+        }
+
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_othlangSignUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewpwdcerti(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_pwdcertiUpload1');
+    var FileUploadPath = fuData.value;
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024*300) {
+                document.getElementById('ctl00_LoginContent_pwdcertiUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                  
+                    filerdr.readAsDataURL(input.files[0]);
+                }
+            }
+        }
+
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_pwdcertiUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewdobcerti(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_dobCertificateUpload1');
+
+    var FileUploadPath = fuData.value;
+    
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024*300) {
+                document.getElementById('ctl00_LoginContent_dobCertificateUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+          
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+                  
+                }
+            }
+        }
+     }
+    else {
+        document.getElementById('ctl00_LoginContent_dobCertificateUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+
+
+function showimagepreviewdomcerti(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_DomicileUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_DomicileUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_DomicileUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewbirthcerti(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_categoryCertiUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_categoryCertiUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_categoryCertiUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewincomecerti(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_IncomeCertificateUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_IncomeCertificateUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_IncomeCertificateUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+function showimagepreviewQualifyingExamMarksheet(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_QualExamMarksheetUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_QualExamMarksheetUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_QualExamMarksheetUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+
+function showimagepreviewGateScoreCard(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_GATEScoreCardUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_GATEScoreCardUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_GATEScoreCardUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+
+function showimagepreviewNIMCETScoreCard(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_NIMCETScoreCardUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_NIMCETScoreCardUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_NIMCETScoreCardUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}
+
+
+function ChgDeclarationImg() {
+
+    var ChkIAgree = document.getElementById('ctl00_LoginContent_chkagreement');
+    var btnFinalSubmit = document.getElementById('ctl00_LoginContent_btnFinalSubmit');
+     
+
+    if (ChkIAgree.checked == true) {
+        btnFinalSubmit.disabled = false;
+        return;
+    }
+    if (ChkIAgree.checked == false) {
+        btnFinalSubmit.disabled = true;
+        return;
+    }
+}
+
+function DisableFinalSubmitButton() {
+    var btnFinalSubmit = document.getElementById('ctl00_LoginContent_btnFinalSubmit');
+    btnFinalSubmit.disabled = true;
+
+}
+
+function showimagepreviewUGCNetScoreCard(input, id) {
+    var fuData = document.getElementById('ctl00_LoginContent_UGCNetScoreCardUpload1');
+
+    var FileUploadPath = fuData.value;
+
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+    if (Extension == "JPEG" || Extension == "JPG" || Extension == "jpeg" || Extension == "jpg") {
+
+        if (fuData.files && fuData.files[0]) {
+            var size = fuData.files[0].size;
+            if (size > 1024 * 300) {
+                document.getElementById('ctl00_LoginContent_UGCNetScoreCardUpload1').value = "";
+                alert("File size exceeded maximum size limit of 300 KB");
+                return false;
+            } else {
+
+                if (input.files && input.files[0]) {
+                    var filerdr = new FileReader();
+                    filerdr.onload = function (e) {
+
+                        $(id).attr('src', e.target.result);
+                    }
+                    filerdr.readAsDataURL(input.files[0]);
+
+                }
+            }
+        }
+    }
+    else {
+        document.getElementById('ctl00_LoginContent_UGCNetScoreCardUpload1').value = "";
+        alert("Only JPG file types are allowed."); return false;
+    }
+}

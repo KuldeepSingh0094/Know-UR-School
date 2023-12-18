@@ -1,0 +1,69 @@
+.label {
+    cursor: pointer;
+}
+
+.img-container {
+    max-width: 100%;
+}
+
+.img-container img{
+  width: 100%;
+}
+
+.modal-body {
+    overflow-y: auto;
+    max-height: calc(100vh - 300px);
+}
+
+.c--display-none {
+    display: none;
+}
+
+.c-edit-control {
+    display: flex;
+    padding-top: 1%;
+    padding-left: 18%;
+    padding-bottom: 1%;
+}
+
+.c-edit-control * {
+    background-color: #E0E0E0;
+    display: block;
+    padding: 8px;
+    text-align: justify;
+}
+
+.c-download-button {
+    padding-top: 2%;
+    display: none;
+    cursor: pointer;
+}
+
+.c-textbox-placing {
+    margin-left: 20%;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    padding-top: 0px;
+    margin-right: 10%;
+}
+
+.c-warning-display--none {
+    display: none;
+}
+
+.c-visibility--hidden {
+    visibility: hidden;
+}
+
+.btn.btn-primary:disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.c-padding--reduce {
+    padding-top: 0;
+}

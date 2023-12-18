@@ -1,0 +1,583 @@
+﻿function ChgMainSpecialization() {
+    var ctrl1 = document.getElementById('ctl00_ContentPlaceHolder1_ddlspl1');
+    var ctrl2 = document.getElementById('ctl00_ContentPlaceHolder1_ddlSpl2');
+    var ctrl3 = document.getElementById('ctl00_ContentPlaceHolder1_ddlSpl3');
+    var ctrl4 = document.getElementById('ctl00_ContentPlaceHolder1_ddlSpl4');
+
+    if (ctrl2 != null) {
+        if (ctrl1.value != "0" && ctrl2.value != "0") {
+            if (ctrl1.value == ctrl2.value) {
+                alert("The 1st & 2nd Choice of Specialization should not be same.");
+                ctrl2.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl3 != null) {
+        if (ctrl1.value != "0" && ctrl3.value != "0") {
+            if (ctrl1.value == ctrl3.value) {
+                alert("The 1st & 3rd Choice of Specialization should not be same.");
+                ctrl3.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl4 != null) {
+        if (ctrl1.value != "0" && ctrl4.value != "0") {
+            if (ctrl1.value == ctrl4.value) {
+                alert("The 1st & 4th Choice of Specialization should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl2 != null && ctrl3 != null) {
+        if (ctrl2.value != "0" && ctrl3.value != "0") {
+            if (ctrl2.value == ctrl3.value) {
+                alert("The 2nd & 3rd Choice of Specialization should not be same.");
+                ctrl3.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl2 != null && ctrl4 != null) {
+        if (ctrl2.value != "0" && ctrl4.value != "0") {
+            if (ctrl2.value == ctrl4.value) {
+                alert("The 2nd & 4th Choice of Specialization should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl3 != null && ctrl4 != null) {
+        if (ctrl3.value != "0" && ctrl4.value != "0") {
+            if (ctrl3.value == ctrl4.value) {
+                alert("The 3rd & 4th Choice of Specialization should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+
+    return true;
+}
+
+
+function CustomValMobileNo(sender, args) {
+    var ctrlRoll = document.getElementById('ctl00_ContentPlaceHolder1_txtmobileno');
+    if (ctrlRoll.value != "") {
+        var str = ctrlRoll.value;
+        if (str.charAt(0) == "0") {
+            args.IsValid = false;
+        }
+        else {
+            args.IsValid = true;
+        }
+
+    }
+}
+
+function ChgAadhaarConsent() {
+
+    var ChkIAgree = document.getElementById('ctl00_ContentPlaceHolder1_chkadharaggreement');
+    var ctrlBttnSubmit = document.getElementById('ctl00_ContentPlaceHolder1_submitbutton');
+    if (ChkIAgree.checked == true) {
+        ctrlBttnSubmit.disabled = false;
+        return;
+    }
+    if (ChkIAgree.checked == false) {
+        ctrlBttnSubmit.disabled = true;
+        return;
+    }
+}
+
+function DisableSubmitOnAadhaarConsent() {
+
+    var ctrlBttnSubmit = document.getElementById('ctl00_ContentPlaceHolder1_submitbutton');
+    var ctrlddlVerificationType = document.getElementById('ctl00_ContentPlaceHolder1_ddltypeofidentification');
+    if (ctrlddlVerificationType.value == "01") {
+        ctrlBttnSubmit.disabled = true;
+    }
+    else {
+
+        ctrlBttnSubmit.disabled = false;
+    }
+
+}
+
+function ChgMainExamCentre() {
+    var ctrl1 = document.getElementById('ctl00_ContentPlaceHolder1_ddlOfflineExamCentre1');
+    var ctrl2 = document.getElementById('ctl00_ContentPlaceHolder1_ddlOfflineExamCentre2');
+    var ctrl3 = document.getElementById('ctl00_ContentPlaceHolder1_ddlOfflineExamCentre3');
+    var ctrl4 = document.getElementById('ctl00_ContentPlaceHolder1_ddlOfflineExamCentre4');
+ 
+    if (ctrl2 != null) {
+        if (ctrl1.value != "0" && ctrl2.value != "0") {
+            if (ctrl1.value == ctrl2.value) {
+                alert("The 1st & 2nd Choice of Examcenter should not be same.");
+                ctrl2.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl3 != null) {
+        if (ctrl1.value != "0" && ctrl3.value != "0") {
+            if (ctrl1.value == ctrl3.value) {
+                alert("The 1st & 3rd Choice of Examcenter should not be same.");
+                
+                ctrl3.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl4 != null) {
+        if (ctrl1.value != "0" && ctrl4.value != "0") {
+            if (ctrl1.value == ctrl4.value) {
+                alert("The 1st & 4th Choice of Examcenter should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl2 != null && ctrl3 != null) {
+        if (ctrl2.value != "0" && ctrl3.value != "0") {
+            if (ctrl2.value == ctrl3.value) {
+                alert("The 2nd & 3rd Choice of Examcenter should not be same.");
+                ctrl3.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl2 != null && ctrl4 != null) {
+        if (ctrl2.value != "0" && ctrl4.value != "0") {
+            if (ctrl2.value == ctrl4.value) {
+                alert("The 2nd & 4th Choice of Examcenter should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+    if (ctrl3 != null && ctrl4 != null) {
+        if (ctrl3.value != "0" && ctrl4.value != "0") {
+            if (ctrl3.value == ctrl4.value) {
+                alert("The 3rd & 4th Choice of Examcenter should not be same.");
+                ctrl4.value = "0"
+                return false;
+            }
+        }
+    }
+
+    //    if (ctrl1.value != null && ctrl2.value != null && ctrl3.value != null && ctrl4.value != null) {
+    //        if (ctrl1.value == "0" || ctrl2.value == "0" || ctrl3.value == "0" || ctrl4.value == "0") {
+    //            return false;
+    //        } 
+    //    }
+    return true;
+}
+
+
+function CustomValPhPer(sender, args) {
+    var ctrltxtPhPer = document.getElementById('ctl00_ContentPlaceHolder1_txtPercentageOfDisability');
+    var ctrlDdlPh = document.getElementById('ctl00_ContentPlaceHolder1_ddlPwD');
+    if (ctrlDdlPh != null && ctrltxtPhPer != null) {
+        if (ctrlDdlPh.value == "1" && ctrltxtPhPer.value == "") {
+            args.IsValid = false;
+        }
+        else {
+            args.IsValid = true;
+        }
+    }
+}
+
+function IsNameValid() {
+    var ctrl1 = document.getElementById('ctl00_ContentPlaceHolder1_txtCName');
+    var ctrl2 = document.getElementById('ctl00_ContentPlaceHolder1_txtMName');
+    var ctrl3 = document.getElementById('ctl00_ContentPlaceHolder1_txtFName');
+    var ctrl4 = document.getElementById('ctl00_ContentPlaceHolder1_txtGName');
+
+    if (ctrl2 != null) {
+        if (ctrl1.value != "" && ctrl2.value != "") {
+            if (ctrl1.value.toUpperCase() == ctrl2.value.toUpperCase()) {
+                alert("Candidate's Name & Mother's Name should not be same.");
+                ctrl2.value = ""
+                return;
+            }
+        }
+    }
+    if (ctrl3 != null) {
+        if (ctrl1.value != "" && ctrl3.value != "") {
+            if (ctrl1.value.toUpperCase() == ctrl3.value.toUpperCase()) {
+                alert("Candidate's Name & Father's Name should not be same.");
+                ctrl3.value = ""
+                return;
+            }
+        }
+    }
+    if (ctrl4 != null) {
+        if (ctrl1.value != "" && ctrl4.value != "") {
+            if (ctrl1.value.toUpperCase() == ctrl4.value.toUpperCase()) {
+                alert("Candidate's Name & Guardian's Name should not be same.");
+                ctrl3.value = ""
+                return;
+            }
+        }
+    }
+ 
+    if (ctrl2 != null && ctrl4 != null) {
+        if (ctrl2.value != "" && ctrl4.value != "") {
+            if (ctrl2.value.toUpperCase() == ctrl4.value.toUpperCase()) {
+                alert("Mother's Name & Guardian's Name should not be same.");
+                ctrl3.value = ""
+                return;
+            }
+        }
+    }
+    if (ctrl3 != null && ctrl4 != null) {
+        if (ctrl3.value != "" && ctrl4.value != "") {
+            if (ctrl3.value.toUpperCase() == ctrl4.value.toUpperCase()) {
+                alert("Father's Name & Guardian's Name should not be same.");
+                ctrl3.value = ""
+                return;
+            }
+        }
+    }
+}
+
+
+
+
+function ChangeSingGirlChildddl() {
+    var ctrlGener = document.getElementById('ctl00_ContentPlaceHolder1_ddlGender');
+    var ctrlSingleGirlChild = document.getElementById('ctl00_ContentPlaceHolder1_ddlSingleGirlChild');
+    if (ctrlSingleGirlChild != null) {
+        if (ctrlGener.value == "02")
+            ctrlSingleGirlChild.disabled = false
+        else if (ctrlGener.value == "01" || ctrlGener.value == "03" || ctrlGener.value == "0") {
+            ctrlSingleGirlChild.disabled = true
+            ctrlSingleGirlChild.value = "0"
+        }
+    }
+    return false;
+}
+
+
+function isDobDateValid(sender, args) {
+    var ctrDay = document.getElementById('ctl00_ContentPlaceHolder1_ddlday');
+    var ctrMonth = document.getElementById('ctl00_ContentPlaceHolder1_ddlmonth');
+    var ctrYear = document.getElementById('ctl00_ContentPlaceHolder1_ddlyear');
+    if (ctrDay.value != "0" && ctrMonth.value != "0" && ctrYear.value != "0") {
+
+        var a = ctrDay.value + "/" + ctrMonth.value + "/" + ctrYear.value;
+        if (a.length < 10 || a.length > 10) {
+            args.IsValid = false;
+            ctrDay.value = "0";
+            return;
+        }
+        var datePat = /^(\d{2})(\/)(\d{2})\2(\d{4})$/;
+        var matchArray = a.match(datePat); // is the format ok?
+        if (matchArray == null) {
+            args.IsValid = false;
+            ctrDay.value = "0";
+            return;
+        }
+        day = ctrDay.value; // parse date into variables
+        month = ctrMonth.value;
+        year = ctrYear.value;
+        if (month < 1 || month > 12) { // check month range
+            args.IsValid = false;
+            ctrDay.value = "0";
+            return;
+        }
+        if (day < 1 || day > 31) {
+            args.IsValid = false;
+            ctrDay.value = "0";
+            return;
+        }
+        if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31) {
+            args.IsValid = false;
+            ctrDay.value = "0";
+            return;
+        }
+        if (month == 2) { // check for february 29th
+            var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+            if (day > 29 || (day == 29 && !isleap)) {
+                args.IsValid = false;
+                ctrDay.value = "0";
+                return;
+            }
+        }
+        args.IsValid = true;  // date is valid
+    }
+}
+
+function CustomValIsOnlyChild(sender, args) {
+    var ctrlGen = document.getElementById('ctl00_ContentPlaceHolder1_ddlGender');
+    var ctrlCh1 = document.getElementById('ctl00_ContentPlaceHolder1_ddlSingleGirlChild');
+    if (ctrlGen.value == "2" && args.Value == "0") {
+        args.IsValid = false;
+    }
+    else {
+        args.IsValid = true;
+    }
+}
+
+function onsubclick() {
+
+    if (document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value != "" && document.getElementById('ctl00_ContentPlaceHolder1_txtSecurityAnswer').value != "") {
+        var passlen = document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value.length;
+        if (passlen > 13 || passlen < 8) {
+            alert('Password should be 8 to 13 character long.');
+            return (false);
+        }
+
+        var a = new RegExp("^(?=.{8,13})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        if (!a.test(document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value)) {
+            alert('Your password must satisfy the following. \n\n* Password should be 8 to 13 character long. \n* Password should have at least one Upper case alphabet.\n* Password should have at least one Lower case alphabet. \n* Password should have at least one numeric value. \n* Password should have at least one special characters eg.!@#$%^&*-');
+            return (false);
+        }
+
+        document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value = (hex_md5(document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value)).toUpperCase();
+        document.getElementById('ctl00_ContentPlaceHolder1_txtConfirmPassword').value = (hex_md5(document.getElementById('ctl00_ContentPlaceHolder1_txtConfirmPassword').value)).toUpperCase();
+        document.getElementById('ctl00_ContentPlaceHolder1_txtSecurityAnswer').value = (hex_md5(document.getElementById('ctl00_ContentPlaceHolder1_txtSecurityAnswer').value.toUpperCase())).toUpperCase();
+
+        var len = document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value.length;
+        if (len > 32 || len < 32) {
+            alert('Operation can not be performed.Your browser is not supporting Password Encription.');
+            return (false);
+        }
+        return (true);
+    }
+    else {
+        return (true);
+    }
+}
+
+function ChgDeclarationAll(itemsCount) {
+
+    var ChkIAgree = document.getElementById('ctl00_ContentPlaceHolder1_chkagreement');
+    var btnFinalSubmit = document.getElementById('ctl00_ContentPlaceHolder1_btnFinalSubmit');
+
+    var cnt = $("#ctl00_ContentPlaceHolder1_paramChkList input:checked").length;
+
+    if (cnt < itemsCount) {
+        ChkIAgree.checked = false;
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').removeClass("final_sub");
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').addClass("final_subd");
+        btnFinalSubmit.disabled = true;
+        return;
+    }
+}
+
+function ChgDeclaration(itemsCount) {
+
+    var ChkIAgree = document.getElementById('ctl00_ContentPlaceHolder1_chkagreement');
+    var btnFinalSubmit = document.getElementById('ctl00_ContentPlaceHolder1_btnFinalSubmit');
+    var cnt = $("#ctl00_ContentPlaceHolder1_paramChkList input:checked").length;
+        //alert(cnt);
+    if (cnt < itemsCount) {
+        alert('Kindly check all the check boxes of Parameter Checkbox list, if  all the information are verified and correct.');
+        ChkIAgree.checked = false;
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').removeClass("final_sub");
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').addClass("final_subd");
+        btnFinalSubmit.disabled = true;
+        return;
+    }
+
+    if (ChkIAgree.checked == true) {
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').removeClass("final_subd");
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').addClass("final_sub");
+        btnFinalSubmit.disabled = false;
+        return;
+    }
+    if (ChkIAgree.checked == false) {
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').removeClass("final_sub");
+        $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').addClass("final_subd");
+        btnFinalSubmit.disabled = true;
+        return;
+    }
+}
+
+function DisableFinalSubmitButton() {
+    var btnFinalSubmit = document.getElementById('ctl00_ContentPlaceHolder1_btnFinalSubmit');
+    $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').removeClass("final_sub");
+    $('#ctl00_ContentPlaceHolder1_btnFinalSubmit').addClass("final_subd");
+    btnFinalSubmit.disabled = true;
+
+}
+
+function ResetDataAppForm() {
+    document.getElementById('ctl00_ContentPlaceHolder1_txtPassword').value = ""
+    document.getElementById('ctl00_ContentPlaceHolder1_txtConfirmPassword').value = ""
+    document.getElementById('ctl00_ContentPlaceHolder1_txtSecurityAnswer').value = ""
+    var con = confirm('Are you sure you want to reset all the data of Application Form?')
+    if (con == true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function ValidateQualifyingExam(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkQualifyingExam.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+//function ValidateExamAttempt(sender, args) {
+//    var checkBoxList = document.getElementById("<%=cbExamAttempt.ClientID %>");
+//    var checkboxes = checkBoxList.getElementsByTagName("input");
+//    var isValid = false;
+//    for (var i = 0; i < checkboxes.length; i++) {
+//        if (checkboxes[i].checked) {
+//            isValid = true;
+//            break;
+//        }
+//    }
+//    args.IsValid = isValid;
+//}
+
+function ValidatechkListSubject(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkListSubject.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+function ValidatechkSeekAdmission(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkSeekAdmission.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+
+function ValidatechkCourseList(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkCourseList.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+function ValidatechkLateral(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkLateralEntry.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+function ValidatechkPaperList(sender, args) {
+    var checkBoxList = document.getElementById("<%=chkPaperList.ClientID %>");
+    var checkboxes = checkBoxList.getElementsByTagName("input");
+    var isValid = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isValid = true;
+            break;
+        }
+    }
+    args.IsValid = isValid;
+}
+
+
+function CalculatePercentage(txtObtained, txtTotal, txtPercentage) {
+//    alert(document.getElementById(txtObtained));
+//    alert(document.getElementById(txtTotal));
+//    alert(document.getElementById(txtPercentage));
+
+    if (document.getElementById(txtObtained).value != "" && document.getElementById(txtTotal).value != "") {
+        var obt = 0;
+        var tot = 0;
+        var per = 0;
+        
+        obt = parseInt(document.getElementById(txtObtained).value);
+        tot = parseInt(document.getElementById(txtTotal).value);
+        if (obt > tot) {
+            document.getElementById(txtObtained).value = "";
+            document.getElementById(txtTotal).value = "";
+            document.getElementById(txtPercentage).value = "";
+            alert("Obtained Marks can't be greater than Total Marks.");
+            return;
+        }
+        per = ((obt * 100) / tot).toFixed(2);
+        document.getElementById(txtPercentage).value = per;
+        
+    }
+}
+
+function CalculateCGPAPercentage(ddlCGPAPointScale, txtCGPAValue, txtCGPAPercentage) 
+{
+    if (document.getElementById(ddlCGPAPointScale).value != "" && document.getElementById(txtCGPAValue).value != "") 
+    {
+        var obt = 0;
+        var tot = 0;
+        var per = 0;
+        obt = parseFloat(document.getElementById(ddlCGPAPointScale).value);
+        tot = parseFloat(document.getElementById(txtCGPAValue).value);
+        if (tot > obt) {
+            document.getElementById(txtCGPAValue).value = "";
+            document.getElementById(txtCGPAPercentage).value = "";
+            alert("CGPA Obtained should not be greater then CGPA Point Scale in Educational Details.");
+            return;
+        }
+        per = ((10 / obt) * tot).toFixed(2)
+        document.getElementById(txtCGPAPercentage).value=per;             
+    }
+}
+
+function OnChangeMedium() {
+    var ctrl0 = document.getElementById('ctl00_ContentPlaceHolder1_ddlQuestionPaperMedium');
+    var ctrl1 = document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam1').options[document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam1').selectedIndex].text;
+    var ctrl2 = document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam2').options[document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam2').selectedIndex].text;
+    var ctrl3 = document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam3').options[document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam3').selectedIndex].text;
+    var ctrl4 = document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam4').options[document.getElementById('ctl00_ContentPlaceHolder1_ddlstatecenterexam4').selectedIndex].text;
+    if (ctrl0.value == "03") {
+        if (! ((ctrl1.toLowerCase().indexOf("gujarat") > -1 || ctrl1.toLowerCase().indexOf("daman") > -1 || ctrl1.toLowerCase().indexOf("dadra") > -1) && (ctrl2.toLowerCase().indexOf("gujarat") > -1 || ctrl2.toLowerCase().indexOf("daman") > -1 || ctrl2.toLowerCase().indexOf("dadra") > -1) && (ctrl3.toLowerCase().indexOf("gujarat") > -1 || ctrl3.toLowerCase().indexOf("daman") > -1 || ctrl3.toLowerCase().indexOf("dadra") > -1) && (ctrl4.toLowerCase().indexOf("gujarat") > -1 || ctrl4.toLowerCase().indexOf("daman") > -1 || ctrl4.toLowerCase().indexOf("dadra") > -1))) {
+            msg = "Gujarati Question Paper Medium is allowed only for those candidates who opted all the Exam Cities from GUJARAT/DAMAN and DIU (UT)/DADRA and NAGAR HAVELI(UT) States.";
+            alert(msg);
+            ctrl0.value = "0";
+        }
+    }
+}
